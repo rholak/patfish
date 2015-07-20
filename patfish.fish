@@ -57,6 +57,7 @@ function _pat-help
     search <pattern...>         Search for a package by name and/or pattern [aptitude]
     find <pattern...>           Search files in packages by pattern [apt-file]
     show <package>              Display detailed information about a package [aptitude]
+    autoremove                  Automatically remove all unused packages [apt-get]
 
   If a command does not match the list above, it is passed directly to aptitude.
 
@@ -112,4 +113,8 @@ end
 
 function _pat-file 
   _pat-su apt-file $argv
+end
+
+function _pat-autoremove
+  _pat-su apt-get autoremove $argv
 end
