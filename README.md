@@ -1,2 +1,2 @@
 # patfish
-A port of rummik/patpat for the Fish shell
+A port of https://github.com/rummik/patpat for the Fish shell

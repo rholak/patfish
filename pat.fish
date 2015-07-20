@@ -1,12 +1,8 @@
-function _pat-su
-  if [ "$USER" != "root" ]
-    sudo -- $argv
-  else 
-    eval $argv
-  end
+function pat
+  patfish $argv
 end
 
-function pat
+function patfish -d "Aptitude with more aptitude"
   set cmd help
 
   if [ (count $argv) -gt 0 ]
@@ -19,6 +15,15 @@ function pat
       set -e argv[1]
     end
   end
+
+function _pat-su
+  if [ "$USER" != "root" ]
+    sudo -- $argv
+  else 
+    eval $argv
+  end
+end
+
 
   # Because the original has it ;)
   if [ $cmd = "moo" ]
