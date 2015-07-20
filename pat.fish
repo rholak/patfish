@@ -1,8 +1,4 @@
-function pat
-  patfish $argv
-end
-
-function patfish -d "Aptitude with more aptitude"
+function pat -d "Aptitude with more aptitude"
   set cmd help
 
   if [ (count $argv) -gt 0 ]
